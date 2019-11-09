@@ -7,7 +7,6 @@ import {
 } from './utils'
 
 import NuxtLoading from './components/nuxt-loading.vue'
-import NuxtBuildIndicator from './components/nuxt-build-indicator'
 
 import '../node_modules/bootstrap/dist/css/bootstrap.css'
 
@@ -18,7 +17,7 @@ import _6f6c098b from '../layouts/default.vue'
 const layouts = { "_default": _6f6c098b }
 
 export default {
-  head: {"title":"hellendoorn-ozb-website","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"My mind-blowing Nuxt.js project"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"}],"style":[],"script":[]},
+  head: {"title":"hellendoorn-ozb-website","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"My mind-blowing Nuxt.js project"},{"propery":"og:url","content":"https:\u002F\u002Fhellendoornozb.nl"},{"propery":"og:type","content":"website"},{"propery":"og:title","content":"Nee tegen 25% OZB-verhoging!"},{"propery":"og:description","content":"Wij als inwoners van de gemeente Hellendoorn maken een vuist tegen de gemeente door de verhoging van de OZB-belasting niet te betalen. de Automatische incasso voor de OZB-belasting zetten wij stop en wij maken een bedrag minus 25% over naar de gemeente"},{"propery":"og:image","content":"\u002Ffb.png"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"}],"style":[],"script":[]},
 
   render (h, props) {
     const loadingEl = h('NuxtLoading', { ref: 'loading' })
@@ -52,7 +51,7 @@ export default {
       }
     }, [
       loadingEl,
-      h(NuxtBuildIndicator),
+
       transitionEl
     ])
   },
@@ -162,10 +161,6 @@ export default {
     },
 
     setLayout (layout) {
-      if(layout && typeof layout !== 'string') {
-        throw new Error('[nuxt] Avoid using non-string value as layout property.')
-      }
-
       if (!layout || !layouts['_' + layout]) {
         layout = 'default'
       }
