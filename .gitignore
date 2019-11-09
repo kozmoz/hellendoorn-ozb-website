@@ -1,0 +1,10 @@
+.nuxt/
+.idea/
+/node_modules/
+logs/*
+tmp
+.DS_Store
+coverage
+dist
+.tmp
+/.idea/
