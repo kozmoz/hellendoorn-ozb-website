@@ -105,4 +105,10 @@
         color: #b62939;
     }
 
+    @media (max-width: 575.98px) {
+        .media img {
+            max-width: 120px;
+        }
+    }
+
 </style>

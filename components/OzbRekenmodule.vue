@@ -7,7 +7,7 @@
             247.000,-</a></p>
         <form>
             <div class="row">
-                <div class="col-4">
+                <div class="col-12 col-md-4">
                     <div class="form-group">
                         <label for="woz">WOZ-waarde van de woning</label>
                         <div class="input-group mb-3">
@@ -15,19 +15,19 @@
                                 <span class="input-group-text" id="basic-addon1">&euro;</span>
                             </div>
                             <input type="number" class="form-control" id="woz" aria-describedby="help" v-model="woz"
-                                   style="max-width: 14em"/>
+                                   style="max-width: 14em" @keyup="wozChange()"/>
                         </div>
                         <small id="help" class="form-text text-muted">Typ hier de waarde van de woning, in hele
                             euro's.</small>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-12 col-md-4">
                     <div v-if="ozb2019">
                         <strong>In 2019 was de OZB-belasting:</strong>
                         <p class="amount mt-2">€ {{ozb2019 | amount}}</p></div>
                 </div>
-                <div class="col-4">
-                    <div v-if="ozb2020">
+                <div class="col-12 col-md-4">
+                    <div v-if="ozb2020" id="ozb-result">
                         <strong>In 2020 is de OZB-belasting:</strong>
                         <p class="amount mt-2 mb-0">
                             € {{ozb2020 | amount}}
@@ -67,6 +67,15 @@
         methods: {
             setWoz(value) {
                 this.woz = '' + value;
+            },
+            /**
+             * Ensure the result is visible.
+             */
+            wozChange() {
+                let ozbResult = global.document.getElementById('ozb-result');
+                if (ozbResult) {
+                    ozbResult.scrollIntoView(false);
+                }
             }
         }
     }
@@ -86,6 +95,7 @@
         font-size: 24px;
         font-weight: bold;
     }
+
     .angry {
         font-size: 48px;
     }

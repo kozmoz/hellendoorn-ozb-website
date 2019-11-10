@@ -13,7 +13,9 @@
             </h1>
 
             <div class="mb-3 justify">
-                <img src="~/assets/ozb-verhoging.png" alt="" width="450" title="Hellendoorn OZB-verhoging 25%"/>
+                <img src="~/assets/ozb-verhoging.png" alt="Gemeente Hellendoorn: Nee tegen 25% OZB-verhoging!"
+                     width="450"
+                     title="Hellendoorn OZB-verhoging 25%"/>
             </div>
 
             <blockquote class="blockquote justify font-italic">
@@ -26,24 +28,23 @@
             <p>&nbsp;</p>
 
             <div class="alert alert-warning" role="alert">
-                <h4 class="alert-heading">Deze absurde verhoging van de OZB-belasting gaan wij als inwoners niet
-                    betalen!</h4>
+                <h4 class="alert-heading">Deze absurde verhoging van de OZB-belasting gaan wij als inwoners van de
+                    gemeente Hellendoorn niet betalen!</h4>
                 <p>
                     Er moeten andere keuzes gemaakt worden om de begroting weer op orde te krijgen.
                 </p>
                 <ol>
                     <li>Bezuinigen in het gemeentehuis (ambtenaren en bestuur)</li>
-                    <li>verkoop van gemeentelijk eigendom (gebouwen en gronden)</li>
+                    <li>Verkoop van gemeentelijk eigendom (gebouwen en gronden)</li>
                 </ol>
                 <hr>
 
-
                 <p>
-                    <strong>Wat is het plan?</strong>
-                    Wij als inwoners van de gemeente Hellendoorn maken een vuist tegen de gemeente door de
+                    <strong><em>Wat is het plan?</em></strong>
+                    Wij als inwoners van de gemeente Hellendoorn maken een vuist door de
                     verhoging van de OZB-belasting niet te betalen.
-                    <strong>de Automatische incasso voor de OZB-belasting zetten wij stop en wij maken
-                        een bedrag minus 25% over naar de gemeente.</strong>
+                    <strong><u>de Automatische incasso voor de gemeentebelastingen zetten wij stop en wij maken
+                        een bedrag minus de 25%-OZB verhoging over naar de gemeente.</u></strong>
                 </p>
             </div>
 
@@ -96,6 +97,19 @@
     }
 </script>
 
+<style scoped="true">
+    @media (max-width: 575.98px) {
+        h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        img {
+            max-width: 90vw !important;
+        }
+    }
+</style>
+
 <style>
     h1 {
         margin-bottom: 2rem;
@@ -107,10 +121,6 @@
 
     .unbreakable {
         white-space: nowrap;
-    }
-
-    .media, .media:hover {
-        color: #212529;
     }
 
     .block-sep {
@@ -143,15 +153,4 @@
         letter-spacing: 1px;
     }
 
-    .subtitle {
-        font-weight: 300;
-        font-size: 42px;
-        color: #526488;
-        word-spacing: 5px;
-        padding-bottom: 15px;
-    }
-
-    .links {
-        padding-top: 15px;
-    }
 </style>
