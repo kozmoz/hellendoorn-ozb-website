@@ -13,7 +13,7 @@
             </h1>
 
             <div class="mb-3 justify">
-                <img src="ozb-verhoging.png" alt="" width="450" title="Hellendoorn OZB-verhoging 25%"/>
+                <img src="~/assets/ozb-verhoging.png" alt="" width="450" title="Hellendoorn OZB-verhoging 25%"/>
             </div>
 
             <blockquote class="blockquote justify font-italic">
@@ -63,7 +63,7 @@
                 <a href="https://www.tubantia.nl/hellendoorn/forse-kritiek-van-hellendoornse-oppositie-op-uitkomsten-begrotingsdebat~a60d471c/"
                    target="_blank">
                     <div class="media">
-                        <img src="/694.jpeg" class="mr-3" alt="" width="200"/>
+                        <img src="~/assets/694.jpeg" class="mr-3" alt="" width="200"/>
                         <div class="media-body">
                             <h5 class="mt-0">8 november - Forse kritiek van Hellendoornse oppositie op
                                 uitkomsten
@@ -78,7 +78,7 @@
                 <a href="https://www.tubantia.nl/hellendoorn/forse-ozb-verhoging-gemeente-hellendoorn-voor-2020-deels-teruggedraaid~a401b513/"
                    target="_blank">
                     <div class="media">
-                        <img src="/deels-teruggedraaid.png" class="mr-3" alt="" width="200"/>
+                        <img src="~/assets/deels-teruggedraaid.png" class="mr-3" alt="" width="200"/>
                         <div class="media-body">
                             <h5 class="mt-0">6 november - Forse ozb-verhoging gemeente Hellendoorn voor 2020 deels
                                 teruggedraaid</h5>
@@ -93,7 +93,7 @@
                 <a href="https://www.tubantia.nl/hellendoorn/lokaal-hellendoorn-presenteert-tegenbegroting-het-moet-allemaal-anders~ad2ec88f/"
                    target="_blank">
                     <div class="media">
-                        <img src="/694-3.jpeg" class="mr-3" alt="" width="200"/>
+                        <img src="~/assets/694-3.jpeg" class="mr-3" alt="" width="200"/>
                         <div class="media-body">
                             <h5 class="mt-0">5 november - Lokaal Hellendoorn presenteert tegenbegroting: ‘Het moet
                                 allemaal anders’</h5>
@@ -107,7 +107,7 @@
                 <a href="https://www.tubantia.nl/hellendoorn/lokaal-hellendoorn-presenteert-tegenbegroting-het-moet-allemaal-anders~ad2ec88f/"
                    target="_blank">
                     <div class="media">
-                        <img src="/694-4.jpeg" class="mr-3" alt="" width="200"/>
+                        <img src="~/assets/694-4.jpeg" class="mr-3" alt="" width="200"/>
                         <div class="media-body">
                             <h5 class="mt-0">18 oktober - Boeren in Hellendoorn in opstand tegen ozb-verhoging</h5>
                             Fractieleider Thea ten Have van Lokaal Hellendoorn heeft geen tractorrijbewijs, maar
@@ -120,7 +120,7 @@
                 <a href="https://www.destentor.nl/reggestreek/lto-vraagt-boerenbedrijven-in-hellendoorn-te-ontzien-bij-ozb-verhoging~aaece656/"
                    target="_blank">
                     <div class="media">
-                        <img src="/694-2.jpeg" class="mr-3" alt="" width="200"/>
+                        <img src="~/assets/694-2.jpeg" class="mr-3" alt="" width="200"/>
                         <div class="media-body">
                             <h5 class="mt-0">7 september - LTO vraagt boerenbedrijven in Hellendoorn te ontzien bij
                                 ozb-verhoging</h5>
@@ -133,7 +133,7 @@
                 <a href="https://localfocus2.appspot.com/5a9463a4ca7a8"
                    target="_blank">
                     <div class="media">
-                        <img src="/NL-stijging-OZB.png" class="mr-3" alt="" width="200"/>
+                        <img src="~/assets/NL-stijging-OZB.png" class="mr-3" alt="" width="200"/>
                         <div class="media-body">
                             <h5 class="mt-0">Landelijk overzicht van de stijging van de OZB-belasting tussen 2014 en
                                 2018</h5>
