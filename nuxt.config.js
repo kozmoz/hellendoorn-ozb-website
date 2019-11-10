@@ -18,7 +18,8 @@ export default {
       {propery: "og:image", content:"/fb.png"},
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel:"manifest", href:"/site.webmanifest"}
     ]
   },
   /*
