@@ -5,7 +5,7 @@
         <p>Bereken aan de hand van de WOZ-waarde van de woning de OZB-belasting van het afgelopen jaar en voor 2020.</p>
         <p><a href="#" @click.prevent="setWoz(247000)">Gebruik als voorbeeld de gemiddelde woningwaarde van €
             247.000,-</a></p>
-        <form>
+        <form novalidate="novalidate">
             <div class="row">
                 <div class="col-12 col-md-4">
                     <div class="form-group">

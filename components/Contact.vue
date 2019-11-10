@@ -4,7 +4,7 @@
 
         <p>Neem contact met ons op via onderstaande formulier.</p>
 
-        <form name="contact" data-netlify="true">
+        <form name="contact" data-netlify="true" novalidate="novalidate">
             <div class="form-group">
                 <label for="namefield">Naam</label>
                 <input type="text" class="form-control" id="namefield" name="name" style="max-width: 25em"/>
