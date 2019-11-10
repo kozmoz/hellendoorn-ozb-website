@@ -95,7 +95,7 @@
 
 <script>
     export default {
-        name: "OzbRekenmodule",
+        name: "FaqModule",
         data: function () {
             return {
                 faq_ozb: false,

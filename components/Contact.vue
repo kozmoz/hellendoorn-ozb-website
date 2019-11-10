@@ -24,7 +24,7 @@
 
 <script>
     export default {
-        name: "OzbRekenmodule",
+        name: "Contact",
         data: function () {
             return {
                 faq_ozb: false,
