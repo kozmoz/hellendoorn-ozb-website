@@ -134,8 +134,7 @@
             </div>
 
             <div class="block-sep">
-                <p class="text-muted">Deze website wordt continu aangevuld. De laatste wijziging was {{BUILD_DATE ||
-                    'BUILD_DATE'}}.</p>
+                <p class="text-muted">Deze website wordt continu aangevuld. De laatste wijziging was {{BUILD_DATE}}.</p>
             </div>
 
 
@@ -167,7 +166,7 @@
     import Contact from "../components/Contact";
     import News from "../components/News";
 
-    const BUILD_DATE = process.env.VUE_APP_BUILD_DATE;
+    const BUILD_DATE = process.env.VUE_APP_BUILD_DATE || process.env.BUILD_DATE || '[onbekend]';
 
     export default {
         components: {
