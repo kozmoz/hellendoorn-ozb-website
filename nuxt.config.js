@@ -1,4 +1,6 @@
 
+process.env.VUE_APP_BUILD_DATE = new Date().toISOString().substr(0, 16);
+
 export default {
   mode: 'universal',
   /*
