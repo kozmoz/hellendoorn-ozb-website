@@ -57,21 +57,6 @@
             </div>
 
             <div class="block-sep">
-                <p>Netlify Form Test</p>
-                <form name="contact" data-netlify="true">
-                    <p>
-                        <label>Name <input type="text" name="name"/></label>
-                    </p>
-                    <p>
-                        <label>Email <input type="email" name="email"/></label>
-                    </p>
-                    <p>
-                        <button type="submit">Send</button>
-                    </p>
-                </form>
-            </div>
-
-            <div class="block-sep">
 
                 <h2 class="mb-3">In het nieuws</h2>
 
@@ -157,6 +142,10 @@
                 </a>
             </div>
 
+            <div class="block-sep">
+                <contact></contact>
+            </div>
+
 
         </div>
         <!-- Load Facebook SDK for JavaScript -->
@@ -177,12 +166,14 @@
     import Logo from '../components/Logo.vue'
     import OzbRekenmodule from "../components/OzbRekenmodule";
     import FaqModule from "../components/FaqModule";
+    import Contact from "../components/Contact";
 
     export default {
         components: {
             FaqModule,
             OzbRekenmodule,
-            Logo
+            Logo,
+            Contact
         }
     }
 </script>
