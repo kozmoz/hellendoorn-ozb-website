@@ -3,7 +3,7 @@ process.env.NUXT_ENV_BUILD_DATE = new Date().toISOString().substr(0, 16);
 
 export default {
   env: {
-    BUILD_DATE: process.env.BUILD_DATE
+    // BUILD_DATE: process.env.BUILD_DATE
   },
   mode: 'universal',
   /*
