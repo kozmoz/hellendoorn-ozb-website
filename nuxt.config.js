@@ -20,7 +20,7 @@ export default {
       {propery: "og:type", content:"website"},
       {propery: "og:title", content:"Nee tegen 25% OZB-verhoging!"},
       {propery: "og:description", content:"Wij als inwoners van de gemeente Hellendoorn maken een vuist tegen de gemeente door de verhoging van de OZB-belasting niet te betalen. de Automatische incasso voor de OZB-belasting zetten wij stop en wij maken een bedrag minus 25% over naar de gemeente"},
-      {propery: "og:image", content:"/fb.png"},
+      {propery: "og:image", content:"https://hellendoornozb.nl/fb.png"},
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
