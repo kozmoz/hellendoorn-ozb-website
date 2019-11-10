@@ -1,9 +1,9 @@
 
-process.env.NUXT_ENV_BUILD_DATE = new Date().toISOString().substr(0, 16);
+process.env.VUE_APP_BUILD_DATE = new Date().toISOString().substr(0, 16);
 
 export default {
   env: {
-    // BUILD_DATE: process.env.BUILD_DATE
+    // baseUrl: process.env.BASE_URL || 'http://localhost:3000'
   },
   mode: 'universal',
   /*
