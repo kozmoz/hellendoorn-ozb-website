@@ -24,7 +24,7 @@
 
             <div class="alert alert-warning" role="alert">
                 <h4 class="alert-heading">Deze absurde verhoging van de OZB-belasting gaan wij als inwoners van de
-                    gemeente Hellendoorn niet betalen!</h4>
+                    gemeente Hellendoorn <em>niet</em> betalen!</h4>
                 <p>
                     Er moeten andere keuzes gemaakt worden om de begroting weer op orde te krijgen.
                 </p>
@@ -179,6 +179,13 @@
 
     .emphasize {
         color: #b62939;
+    }
+
+    .alert em {
+        font-weight: bold;
+        color: #b62939;
+        font-style: normal;
+        text-transform: uppercase;
     }
 
     .unbreakable {
