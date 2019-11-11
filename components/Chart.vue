@@ -1,5 +1,7 @@
 <template>
     <div>
+        <script src="/Chart.min.js"></script>
+
         <h2 class="mb-3">Vergelijk omringende gemeenten</h2>
 
         <p class="text-center">
@@ -13,7 +15,7 @@
 </template>
 
 <script>
-    import "chart.js"
+    // import "chart.js"
 
     // Chart.js documentation:
     // https://github.com/chartjs/Chart.js/blob/master/docs/getting-started/usage.md
