@@ -120,6 +120,10 @@
             </div>
 
             <div class="block-sep">
+                <chart></chart>
+            </div>
+
+            <div class="block-sep">
                 <news></news>
             </div>
 
@@ -141,6 +145,7 @@
     import FaqModule from "../components/FaqModule";
     import Contact from "../components/Contact";
     import News from "../components/News";
+    import Chart from "../components/Chart";
 
     const BUILD_DATE = process.env.VUE_APP_BUILD_DATE || process.env.BUILD_DATE || '[onbekend]';
 
@@ -149,7 +154,8 @@
             FaqModule,
             OzbRekenmodule,
             Contact,
-            News
+            News,
+            Chart
         },
         data: function () {
             return {

@@ -4,7 +4,7 @@
 
         <p>
             <strong>Wie zijn wij?</strong>
-            <a v-if="!faq_wiezijnwij" @click.prevent="faq_wiezijnwij=true" href="#">Toon het antwoord</a>
+            <a v-if="!faq_wiezijnwij" @click.prevent="faq_wiezijnwij=true" href="#">Klik hier voor het antwoord</a>
             <a v-if="faq_wiezijnwij" @click.prevent="faq_wiezijnwij=false" href="#">Verberg het antwoord</a>
         </p>
         <div class="pl-3 pb-3" v-if="faq_wiezijnwij">
@@ -27,7 +27,7 @@
 
         <p>
             <strong>Wat betekent OZB?</strong>
-            <a v-if="!faq_ozb" @click.prevent="faq_ozb=true" href="#">Toon het antwoord</a>
+            <a v-if="!faq_ozb" @click.prevent="faq_ozb=true" href="#">Klik hier voor het antwoord</a>
             <a v-if="faq_ozb" @click.prevent="faq_ozb=false" href="#">Verberg het antwoord</a>
         </p>
         <div class="pl-3 pb-3" v-if="faq_ozb">
@@ -53,7 +53,7 @@
 
         <p>
             <strong>Wat is de hoogte van de OZB-belasting in Hellendoorn nu?</strong>
-            <a v-if="!faq_ozb_hellendoorn" @click.prevent="faq_ozb_hellendoorn=true" href="#">Toon het antwoord</a>
+            <a v-if="!faq_ozb_hellendoorn" @click.prevent="faq_ozb_hellendoorn=true" href="#">Klik hier voor het antwoord</a>
             <a v-if="faq_ozb_hellendoorn" @click.prevent="faq_ozb_hellendoorn=false" href="#">Verberg het antwoord</a>
         </p>
         <div class="pl-3 pb-3" v-if="faq_ozb_hellendoorn">
@@ -72,7 +72,7 @@
 
         <p>
             <strong>Wat is de hoogte van de OZB-belasting in Hellendoorn na 25% verhoging?</strong>
-            <a v-if="!faq_ozb_hellendoorn2" @click.prevent="faq_ozb_hellendoorn2=true" href="#">Toon het antwoord</a>
+            <a v-if="!faq_ozb_hellendoorn2" @click.prevent="faq_ozb_hellendoorn2=true" href="#">Klik hier voor het antwoord</a>
             <a v-if="faq_ozb_hellendoorn2" @click.prevent="faq_ozb_hellendoorn2=false" href="#">Verberg het antwoord</a>
         </p>
         <div class="pl-3 pb-3" v-if="faq_ozb_hellendoorn2">
