@@ -69,10 +69,12 @@ function drawChart(chartElm) {
     });
 }
 
-setTimeout(function() {
-    var chartElm = document.getElementById('ozbChart');
-    if (chartElm) {
-        drawChart(chartElm);
+setTimeout(function () {
+    var chartContainerElm = document.getElementById('chartContainer');
+    if (chartContainerElm) {
+        var canvas = document.createElement('canvas');
+        chartContainerElm.appendChild(canvas);
+        drawChart(canvas);
     } else {
         console.log('==== chartElm not found!');
     }

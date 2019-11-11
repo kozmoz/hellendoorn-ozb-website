@@ -6,10 +6,8 @@
             OZB-belasting omringende gemeenten in €<br/>
             <strong>Na de verhoging schiet de gemeente Hellendoorn daar opvallend ver bovenuit.</strong>
         </p>
-        <div class="chart-container">
-            <client-only>
-                <canvas id="ozbChart"></canvas>
-            </client-only>
+
+        <div class="chart-container" id="chartContainer">
         </div>
 
         <script src="/Chart.min.js"></script>
