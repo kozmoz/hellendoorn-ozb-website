@@ -24,8 +24,10 @@
             return {};
         },
         mounted() {
-            const chartElm = global.document.getElementById('ozbChart');
-            drawChart(chartElm);
+            if (process.client) {
+                const chartElm = global.document.getElementById('ozbChart');
+                drawChart(chartElm);
+            }
         }
     }
 
@@ -105,7 +107,7 @@
     /* https://www.chartjs.org/docs/latest/general/responsive.html */
     .chart-container {
         position: relative;
-        height: 300px;
+        height: 350px;
         max-width: 90vw;
     }
 
@@ -114,6 +116,7 @@
             width: 80vw
         }
     }
+
     @media (max-width: 575.98px) {
         .chart-container {
             height: 400px;
