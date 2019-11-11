@@ -128,7 +128,26 @@
             </div>
 
             <div class="block-sep">
-                <contact></contact>
+                <h2 class="mb-3">Contact</h2>
+
+                <p>Neem contact met ons op via onderstaande formulier.</p>
+
+                <form name="contact" data-netlify="true">
+                    <div class="form-group">
+                        <label for="namefield">Naam</label>
+                        <input type="text" class="form-control" id="namefield" name="name" style="max-width: 25em"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="emailfield">E-mailadres</label>
+                        <input type="email" class="form-control" id="emailfield" name="email" style="max-width: 25em"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="descriptionfield">Opmerkingen</label>
+                        <textarea class="form-control" id="descriptionfield" rows="3" name="description"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Verzend gegevens</button>
+                </form>
+
             </div>
 
             <div class="block-sep">
@@ -143,7 +162,6 @@
 <script>
     import OzbRekenmodule from "../components/OzbRekenmodule";
     import FaqModule from "../components/FaqModule";
-    import Contact from "../components/Contact";
     import News from "../components/News";
     import Chart from "../components/Chart";
 
@@ -153,7 +171,6 @@
         components: {
             FaqModule,
             OzbRekenmodule,
-            Contact,
             News,
             Chart
         },
