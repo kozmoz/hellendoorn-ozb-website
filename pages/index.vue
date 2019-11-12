@@ -132,7 +132,10 @@
 
                 <p>Neem contact met ons op via onderstaande formulier.</p>
 
-                <form name="contact" data-netlify="true">
+                <!-- Actually the form is in /static/dummyform.html -->
+                <!-- https://stackoverflow.com/questions/57200502/netlify-does-not-recognize-form-in-nuxt-app -->
+                <form name="contact" method="post">
+                    <input type="hidden" name="form-name" value="contact" />
                     <div class="form-group">
                         <label for="namefield">Naam</label>
                         <input type="text" class="form-control" id="namefield" name="name" style="max-width: 25em"/>

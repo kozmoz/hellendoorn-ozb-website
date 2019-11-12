@@ -39,7 +39,7 @@
                 } else {
                     console.log('==== chartContainer not found!');
                 }
-            }, 3000);
+            }, 1000);
         }
     }
 
