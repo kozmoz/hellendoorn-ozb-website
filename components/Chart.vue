@@ -27,6 +27,7 @@
             return {};
         },
         mounted() {
+            // Render bar chart only on client side.
             if (!process.client) {
                 return;
             }
@@ -37,7 +38,7 @@
                     chartContainerElm.appendChild(canvas);
                     drawChart(canvas);
                 } else {
-                    console.log('==== chartContainer not found!');
+                    console.error('==== chartContainer not found!');
                 }
             }, 1000);
         }

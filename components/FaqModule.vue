@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="FaqModule">
         <h2 class="mb-3">Vragen en antwoorden</h2>
 
         <p>
@@ -53,7 +53,8 @@
 
         <p>
             <strong>Wat is de hoogte van de OZB-belasting in Hellendoorn nu?</strong>
-            <a v-if="!faq_ozb_hellendoorn" @click.prevent="faq_ozb_hellendoorn=true" href="#">Klik hier voor het antwoord</a>
+            <a v-if="!faq_ozb_hellendoorn" @click.prevent="faq_ozb_hellendoorn=true" href="#">Klik hier voor het
+                antwoord</a>
             <a v-if="faq_ozb_hellendoorn" @click.prevent="faq_ozb_hellendoorn=false" href="#">Verberg het antwoord</a>
         </p>
         <div class="pl-3 pb-3" v-if="faq_ozb_hellendoorn">
@@ -72,7 +73,8 @@
 
         <p>
             <strong>Wat is de hoogte van de OZB-belasting in Hellendoorn na 25% verhoging?</strong>
-            <a v-if="!faq_ozb_hellendoorn2" @click.prevent="faq_ozb_hellendoorn2=true" href="#">Klik hier voor het antwoord</a>
+            <a v-if="!faq_ozb_hellendoorn2" @click.prevent="faq_ozb_hellendoorn2=true" href="#">Klik hier voor het
+                antwoord</a>
             <a v-if="faq_ozb_hellendoorn2" @click.prevent="faq_ozb_hellendoorn2=false" href="#">Verberg het antwoord</a>
         </p>
         <div class="pl-3 pb-3" v-if="faq_ozb_hellendoorn2">
@@ -89,6 +91,31 @@
             </p>
         </div>
 
+        <p>
+            <strong>Wanneer ontvang ik mijn aanslag voor de OZB-belasting?</strong>
+            <a v-if="!faq_ozb_aanslag" @click.prevent="faq_ozb_aanslag=true" href="#">Klik hier voor het antwoord</a>
+            <a v-if="faq_ozb_aanslag" @click.prevent="faq_ozb_aanslag=false" href="#">Verberg het antwoord</a>
+        </p>
+        <div class="pl-3 pb-3" v-if="faq_ozb_aanslag">
+            <p>
+                Afgelopen jaar werd de aanslag voor de gemeentelijke belastingen 25 februari verstuurd naar alle
+                inwoners van de gemeente Hellendoorn. <br />
+                <em><u>De aanslag voor 2020 wordt eind februari verwacht</u></em>.
+            </p>
+            <p>
+                De inwoners die zich digitaal hebben aangemeld via de
+                <a href="https://mijn.overheid.nl" target="_blank" rel="noopener" class="normal-link">"Berichtenbox"-app
+                    van MijnOverheid</a>, zullen
+                de aanslag ook dit jaar weer digitaal ontvangen op hun smartphone. Voor de overige inwoners wordt de
+                aanslag per post verstuurd.
+            </p>
+            <p>
+                Naast de onroerende-zaakbelastingen (OZB) bevat deze aanslag ook de afvalstoffenheffing voor de
+                inzameling van afvalstoffen, de rioolheffing en de hondenbelasting. De aanslag kan in tien termijnen
+                via automatisch-incasso of in één keer via een bankoverschrijving betaald worden.
+            </p>
+        </div>
+
 
     </div>
 </template>
@@ -101,16 +128,18 @@
                 faq_ozb: false,
                 faq_wiezijnwij: false,
                 faq_ozb_hellendoorn: false,
-                faq_ozb_hellendoorn2: false
+                faq_ozb_hellendoorn2: false,
+                faq_ozb_aanslag: false
             };
         }
     }
 </script>
 
 <style scoped>
-    a {
+    a:not(.normal-link) {
         color: #6a7280;
     }
+
     .emphasize {
         color: #b62939;
     }
