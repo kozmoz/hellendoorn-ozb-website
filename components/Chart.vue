@@ -3,11 +3,13 @@
         <h2 class="mb-3">Vergelijk omringende gemeenten</h2>
 
         <p class="text-center mb-0">
-            OZB-belasting omringende gemeenten in &euro;
+            OZB-belasting<sup>*</sup> omringende gemeenten in &euro;
         </p>
-        <p class="text-center">
+        <p class="text-center mb-0">
             <strong>Na verhoging schiet de gemeente Hellendoorn daar opvallend ver bovenuit.</strong>
         </p>
+
+        <p class="text-center text-muted small">* Gebaseerd op een WOZ-waarde van {{propertyPrice}}</p>
 
         <div class="chart-container" id="chartContainer">
             <!-- placeholder for canvas. -->
@@ -18,13 +20,17 @@
 <script>
     import Chart from "chart.js"
 
+    const propertyPrice = 247000;
+
     // Chart.js documentation:
     // https://github.com/chartjs/Chart.js/blob/master/docs/getting-started/usage.md
     export default {
 
         name: "Chart",
         data: function () {
-            return {};
+            return {
+                propertyPrice: formatPrice(propertyPrice)
+            };
         },
         mounted() {
             // Render bar chart only on client side.
@@ -48,7 +54,6 @@
         if (!chartElm) {
             return;
         }
-        const proprtyPrice = 247000;
         const ctx = chartElm.getContext('2d');
         new Chart(ctx, {
             type: 'bar',
@@ -66,14 +71,14 @@
                 datasets: [{
                     label: '',
                     data: [
-                        (0.0860 / 100 * proprtyPrice).toFixed(2),
-                        (0.1019 / 100 * proprtyPrice).toFixed(2),
-                        (0.1061 / 100 * proprtyPrice).toFixed(2),
-                        (0.1102 / 100 * proprtyPrice).toFixed(2),
-                        (0.1143 / 100 * proprtyPrice).toFixed(2),
-                        (0.1199 / 100 * proprtyPrice).toFixed(2),
-                        (0.1352 / 100 * proprtyPrice).toFixed(2),
-                        (0.17925 / 100 * proprtyPrice).toFixed(2)
+                        (0.0860 / 100 * propertyPrice).toFixed(2),
+                        (0.1019 / 100 * propertyPrice).toFixed(2),
+                        (0.1061 / 100 * propertyPrice).toFixed(2),
+                        (0.1102 / 100 * propertyPrice).toFixed(2),
+                        (0.1143 / 100 * propertyPrice).toFixed(2),
+                        (0.1199 / 100 * propertyPrice).toFixed(2),
+                        (0.1352 / 100 * propertyPrice).toFixed(2),
+                        (0.17925 / 100 * propertyPrice).toFixed(2)
                     ],
                     backgroundColor: [
                         'rgba(64, 64, 64, 0.2)',
@@ -106,7 +111,7 @@
                 scales: {
                     yAxes: [{
                         ticks: {
-                            beginAtZero: false
+                            beginAtZero: true
                         }
                     }]
                 },
@@ -114,6 +119,22 @@
             }
         });
     }
+
+    /**
+     * Format the given price in NL format.
+     *
+     * @param {number} prince
+     * @returns {string} Price formatted for NL
+     */
+    function formatPrice(prince) {
+        // NodeJS only has support for en-US.
+        return new Intl.NumberFormat('en-US', {style: 'currency', currency: 'EUR'})
+            .format(prince || 0)
+            .replace('.', 'x')
+            .replace(/,/, '.')
+            .replace('x', ',').replace(',00', ',-');
+    }
+
 
 </script>
 
