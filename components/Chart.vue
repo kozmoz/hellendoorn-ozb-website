@@ -3,13 +3,26 @@
         <h2 class="mb-3">Vergelijk omringende gemeenten</h2>
 
         <p class="text-center mb-0">
-            OZB-belasting<sup>*</sup> omringende gemeenten in &euro;
+            OZB-belasting* omringende gemeenten in 2020
         </p>
         <p class="text-center mb-0">
             <strong>Na verhoging schiet de gemeente Hellendoorn daar opvallend ver bovenuit.</strong>
         </p>
 
-        <p class="text-center text-muted small">* Gebaseerd op een WOZ-waarde van {{propertyPrice}}</p>
+        <p class="text-center text-muted small">* Gebaseerd op een WOZ-waarde van {{propertyPrice | formatPrice }}</p>
+
+        <div class="form-group row">
+            <label for="wozchart" class="col col-form-label text-right">Wijzig de WOZ-waarde:</label>
+            <div class="col-5 col-md-3">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">&euro;</span>
+                    </div>
+                    <input id="wozchart" name="woz" class="form-control" type="number" v-model="propertyPriceField"
+                       @keyup="updateChart()"/>
+                </div>
+            </div>
+        </div>
 
         <div class="chart-container" id="chartContainer">
             <!-- placeholder for canvas. -->
@@ -20,7 +33,11 @@
 <script>
     import Chart from "chart.js"
 
-    const propertyPrice = 247000;
+    // Initial property price.
+    let propertyPrice = 247000;
+    // Bar chart canvas.
+    let canvas;
+    let debouncedDrawFn;
 
     // Chart.js documentation:
     // https://github.com/chartjs/Chart.js/blob/master/docs/getting-started/usage.md
@@ -29,7 +46,8 @@
         name: "Chart",
         data: function () {
             return {
-                propertyPrice: formatPrice(propertyPrice)
+                propertyPrice,
+                propertyPriceField: propertyPrice
             };
         },
         mounted() {
@@ -40,13 +58,31 @@
             setTimeout(() => {
                 const chartContainerElm = document.getElementById('chartContainer');
                 if (chartContainerElm) {
-                    const canvas = document.createElement('canvas');
+                    canvas = document.createElement('canvas');
                     chartContainerElm.appendChild(canvas);
                     drawChart(canvas);
-                } else {
-                    console.error('==== chartContainer not found!');
+
+                    debouncedDrawFn = debounce(() => {
+                        drawChart(canvas);
+                    }, 600)
                 }
             }, 1000);
+        },
+        methods: {
+            updateChart: function () {
+                this.propertyPriceField = (this.propertyPriceField || '').replace(/[.,e]/g, '');
+                const field = +this.propertyPriceField;
+                if (field >= 0 && this.propertyPrice !== field) {
+                    this.propertyPrice = field;
+                    propertyPrice = field;
+                    debouncedDrawFn();
+                }
+            }
+        },
+        filters: {
+            formatPrice(price) {
+                return formatPrice(price);
+            }
         }
     }
 
@@ -69,7 +105,7 @@
                     'Hellendoorn',
                 ],
                 datasets: [{
-                    label: '',
+                    label: '€',
                     data: [
                         (0.0860 / 100 * propertyPrice).toFixed(2),
                         (0.1019 / 100 * propertyPrice).toFixed(2),
@@ -111,7 +147,11 @@
                 scales: {
                     yAxes: [{
                         ticks: {
-                            beginAtZero: true
+                            beginAtZero: true,
+                            callback: function(label) {
+                                // Put an EURO sign in front of the labels at the y-axis.
+                                return ('€ ' + label).replace('.', ',');
+                            }
                         }
                     }]
                 },
@@ -131,10 +171,32 @@
         return new Intl.NumberFormat('en-US', {style: 'currency', currency: 'EUR'})
             .format(prince || 0)
             .replace('.', 'x')
-            .replace(/,/, '.')
+            .replace(/,/g, '.')
             .replace('x', ',').replace(',00', ',-');
     }
 
+    /**
+     * https://davidwalsh.name/javascript-debounce-function
+     *
+     * @param func
+     * @param wait
+     * @param immediate
+     * @returns {function(...[*]=)}
+     */
+    function debounce(func, wait, immediate) {
+        var timeout;
+        return function () {
+            var context = this, args = arguments;
+            var later = function () {
+                timeout = null;
+                if (!immediate) func.apply(context, args);
+            };
+            var callNow = immediate && !timeout;
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+            if (callNow) func.apply(context, args);
+        };
+    }
 
 </script>
 
