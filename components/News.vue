@@ -3,6 +3,20 @@
 
         <h2 class="mb-3">In het nieuws</h2>
 
+        <a href="https://www.tubantia.nl/hellendoorn/hellendoorn-trekt-knip-bijna-1-miljoen-euro-voor-aanpak-2-kruisingen-in-nijverdal~a11fa022/"
+           target="_blank">
+            <div class="media">
+                <img src="~/assets/Nijverdal-kruising-201912.png" class="mr-3" alt="" width="200"/>
+                <div class="media-body">
+                    <h5 class="mt-0">14 december - Hellendoorn trekt knip: bijna 1 miljoen euro voor aanpak 2 kruisingen
+                        in Nijverdal</h5>
+                    De gemeente Hellendoorn verkeert financieel in zwaar weer, maar heeft desondanks uit
+                    diverse potjes toch voldoende geld bij elkaar geharkt om twee kruispunten in het centrum van
+                    Nijverdal te kunnen aanpakken.
+                </div>
+            </div>
+        </a>
+        <hr/>
         <a href="https://www.tubantia.nl/hellendoorn/forse-kritiek-van-hellendoornse-oppositie-op-uitkomsten-begrotingsdebat~a60d471c/"
            target="_blank">
             <div class="media">
