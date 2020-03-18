@@ -3,6 +3,19 @@
 
         <h2 class="mb-3">In het nieuws</h2>
 
+        <a href="https://tpo.nl/2020/02/28/in-meer-dan-80-gemeenten-is-woz-waarde-te-hoog-gewaardeerd-dien-daarom-bezwaar-in/"
+           target="_blank">
+            <div class="media">
+                <img src="~/assets/kadasterdata.jpg" class="mr-3" alt="" width="200"/>
+                <div class="media-body">
+                    <h5 class="mt-0">28 februari 2020 - In meer dan 80 gemeenten is WOZ-waarde te hoog gewaardeerd</h5>
+                    Volgens Kadasterdata blijkt er voor bijna 90% van de huishoudens in de gemeente Scherpenzeel een
+                    besparing mogelijk door bezwaar te maken tegen de WOZ-waarde. Met nog geen 5% van de huishoudens is
+                    de kans op een succesvol bezwaar in de gemeente Pekela het laagst.
+                </div>
+            </div>
+        </a>
+        <hr/>
         <a href="https://www.tubantia.nl/hellendoorn/hellendoorn-trekt-knip-bijna-1-miljoen-euro-voor-aanpak-2-kruisingen-in-nijverdal~a11fa022/"
            target="_blank">
             <div class="media">
